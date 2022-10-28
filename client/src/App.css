@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-yellow: #f9c74f;
+  --color-purple: #9d4edd;
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.chart .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form button {
+  background-color: var(--color-purple)!important;
+  color: white!important;
+}
+
+form button:hover {
+  background-color: #6414a6 !important;
+  color: white !important;
+}
