@@ -15,7 +15,7 @@ function App() {
 
   const getLabels = async () => {
     await axios
-      .get("http://localhost:3005/api/labels")
+      .get("https://expense-tracker-api-18qm.onrender.com/api/labels")
       .then(res => setLabels(res.data))
       .catch(error => console.log(error))
       .finally(() => getPercent());
@@ -23,7 +23,7 @@ function App() {
 
   const deleteTransaction = async id => {
     await axios
-      .delete(`http://localhost:3005/api/transactions`, {
+      .delete(`https://expense-tracker-api-18qm.onrender.com/api/transactions`, {
         data: {
           _id: id,
         },
@@ -33,7 +33,7 @@ function App() {
   };
 
   const getPercent = async () => {
-    const data = await axios.get("http://localhost:3005/api/labels");
+    const data = await axios.get("https://expense-tracker-api-18qm.onrender.com/api/labels");
     const newLabels = data.data;
 
     const totalExpend = newLabels.reduce((pre, cur) => pre + cur["amount"], 0);

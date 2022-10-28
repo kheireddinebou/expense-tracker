@@ -16,7 +16,7 @@ const Form = ({labels, deleteTransaction, getLabels}) => {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:3005/api/transactions", formData)
+      .post("https://expense-tracker-api-18qm.onrender.com/api/transactions", formData)
       .catch(error => console.log(error))
       .finally(() => getLabels())
     setFormData({ type: "Investment", amount: "", name: "" });
